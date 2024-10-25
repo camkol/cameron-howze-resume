@@ -1,42 +1,38 @@
 @font-face {
   font-family: "Century Gothic";
-  src: url("./CenturyGothic/centurygothic.ttf") format("truetype"), url("./CenturyGothic/centurygothic_bold.ttf") format("truetype");
+  src: url("./CenturyGothic/centurygothic.ttf") format("truetype"),
+    url("./CenturyGothic/centurygothic_bold.ttf") format("truetype");
 }
+
+$font-family_1: "Century Gothic";
+
 .App {
-  font-family: "Century Gothic";
+  font-family: $font-family_1;
   margin: 20px;
   width: 8in;
   height: 10.5;
 }
-
 .contact {
   margin: 20px 0;
 }
-
 .skills {
   margin: 20px 0;
 }
-
 .projects {
   margin: 20px 0;
 }
-
 .experience {
   margin: 20px 0;
 }
-
 .education {
   margin: 20px 0;
 }
-
 h1 {
   font-size: 2.5rem;
 }
-
 h3 {
   font-size: 1.5rem;
 }
-
 ul {
   list-style-type: none;
-}/*# sourceMappingURL=App.css.map */
+}
