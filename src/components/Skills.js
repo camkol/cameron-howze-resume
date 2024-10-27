@@ -1,9 +1,12 @@
 import React from "react";
 
-function Skills() {
+function Skills({ skills }) {
   return (
     <div className="skills">
       <h3>Skills</h3>
+      {Object.entries(skills).map(([category, details]) => (
+        <Category key={category} name={category} details={details} />
+      ))}
       <ul>
         <li>Programming Languages: JavaScript, PHP</li>
         <li>Front-end: HTML, CSS, Bootstrap, SASS, ReactJS, Redux, jQuery</li>
@@ -18,3 +21,21 @@ function Skills() {
 }
 
 export default Skills;
+
+function Category({ name, details }) {
+  return (
+    <div className="category">
+      <p style={{ textDecoration: "underline" }}>{name}:</p>
+      <p>
+        {details
+          .map((skill, index) => (
+            <span key={index}>
+              {skill}
+              {index < details.length - 1 ? ", " : ""}
+            </span>
+          ))
+          .join(",")}
+      </p>
+    </div>
+  );
+}

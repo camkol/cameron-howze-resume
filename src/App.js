@@ -10,8 +10,8 @@ import "./App.css";
 
 function App() {
   const skills = resumeData.skills;
-
-  console.log(skills);
+  const experience = resumeData.experience;
+  const education = resumeData.education;
 
   return (
     <div className="App">
@@ -19,10 +19,10 @@ function App() {
       <h2>Front-end Web Developer</h2>
       <Objective />
       <Contact />
-      <Skills />
+      <Skills skills={skills} />
       <Projects />
-      <Experience />
-      <Education />
+      <Experience experience={experience} />
+      <Education education={education} />
     </div>
   );
 }
