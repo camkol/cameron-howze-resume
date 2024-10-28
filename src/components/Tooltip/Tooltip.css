@@ -1,0 +1,37 @@
+.hover-container {
+  display: inline-block;
+  cursor: pointer;
+  position: relative; /* Required for positioning the tooltip */
+}
+
+.hover-text {
+  visibility: visible; /* Always visible when rendered */
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+  transition: opacity 0.3s;
+  opacity: 0.9; /* You can adjust this to control transparency */
+}
+
+/* Positioning styles */
+.hover-text.top {
+  transform: translate(-50%, -100%); /* Position above the element */
+}
+
+.hover-text.bottom {
+  transform: translate(-50%, 0); /* Position below the element */
+}
+
+.hover-text.left {
+  transform: translate(-100%, -50%); /* Position to the left of the element */
+}
+
+.hover-text.right {
+  transform: translate(0, -50%); /* Position to the right of the element */
+}

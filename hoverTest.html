@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Tooltip Following Mouse</title>
+    <style>
+      .hover-container {
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .hover-text {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+
+      .hover-container:hover .hover-text {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hover-container">
+      Hover over me
+      <div class="hover-text" id="tooltip">Hello, I am a tooltip!</div>
+    </div>
+
+    <script>
+      const hoverContainer = document.querySelector(".hover-container");
+      const tooltip = document.getElementById("tooltip");
+
+      hoverContainer.addEventListener("mousemove", (event) => {
+        // Get the mouse position
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        // Position the tooltip relative to the mouse position
+        tooltip.style.left = `${mouseX + 10}px`; // Offset to the right
+        tooltip.style.top = `${mouseY + 10}px`; // Offset downward
+      });
+
+      hoverContainer.addEventListener("mouseenter", () => {
+        tooltip.style.visibility = "visible";
+        tooltip.style.opacity = "1";
+      });
+
+      hoverContainer.addEventListener("mouseleave", () => {
+        tooltip.style.visibility = "hidden";
+        tooltip.style.opacity = "0";
+      });
+    </script>
+  </body>
+</html>

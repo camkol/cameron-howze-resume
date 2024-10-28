@@ -1,6 +1,6 @@
 import React from "react";
 
-function Education() {
+function Education({ education }) {
   return (
     <div className="education">
       <h3>Education</h3>
@@ -18,8 +18,27 @@ function Education() {
           ITT Technical Institute: AA in Computer Drafting and Design (2004)
         </li>
       </ul>
+
+      {Object.entries(education).map(([institute, details]) => (
+        <Institute key={institute} name={institute} details={details} />
+      ))}
     </div>
   );
 }
 
 export default Education;
+
+function Institute({ name, details }) {
+const {year,certificate,degrees}
+
+  return (
+    <div className={name.replace(/\s+/g, "")}>
+      <div>
+        <h4>{name}</h4><p>{year}</p>
+        {certificate && (
+          <p><strong>{certificate.course}</strong></p>
+        )}
+      </div>
+    </div>
+  );
+}
