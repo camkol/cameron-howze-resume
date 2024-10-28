@@ -232,7 +232,7 @@ export const resumeData = {
       degrees: [
         {
           degreeName:
-            "Associates of Applied Science in Computer Drafting and Design",
+            "Associates Degree of Applied Science in Computer Drafting and Design",
           lessons: [
             "Dynamics in an Information Society",
             "Computers in Technology",
@@ -246,7 +246,7 @@ export const resumeData = {
         },
         {
           degreeName:
-            "Bachelor of Science in Digital Entertainment and Game Design",
+            "Bachelor Degree of Science in Digital Entertainment and Game Design",
           lessons: [
             "Introduction to Computer Programming",
             "Animation I",
