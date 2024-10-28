@@ -169,7 +169,7 @@ export const resumeData = {
       image: "images/education/Udemy_logo.svg.png",
       certificate: [
         {
-          courseName: "The Ultimate React Course",
+          course: "The Ultimate React Course",
           lessons: [
             "React Fundamentals",
             "How to Think About State",
@@ -188,7 +188,7 @@ export const resumeData = {
           ],
         },
         {
-          courseName: "The Web Developer Bootcamp",
+          course: "The Web Developer Bootcamp",
           lessons: [
             // "Maps and Geocoding",
             // "Image Upload and Storage",

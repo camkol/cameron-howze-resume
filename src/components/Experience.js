@@ -32,7 +32,7 @@ export default Experience;
 function Job({ job }) {
   const { company, title, duration } = job;
   return (
-    <div className={company.replace(/\s+/g, "")}>
+    <div className="job" id={company.replace(/\s+/g, "")}>
       {" "}
       {/* Use replace to remove spaces if you need a class name */}
       <p>

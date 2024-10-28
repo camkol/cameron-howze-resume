@@ -4,9 +4,16 @@
 }
 .App {
   font-family: "Century Gothic";
-  margin: 20px;
+  margin: auto;
   width: 8in;
   height: 10.5;
+  display: flex;
+}
+.App .left {
+  width: 30%;
+}
+.App .right {
+  width: 70%;
 }
 
 .contact {

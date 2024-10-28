@@ -8,9 +8,17 @@ $font-family_1: "Century Gothic";
 
 .App {
   font-family: $font-family_1;
-  margin: 20px;
+  margin: auto;
   width: 8in;
   height: 10.5;
+  display: flex;
+  // background-color: gray;
+  .left {
+    width: 30%;
+  }
+  .right {
+    width: 70%;
+  }
 }
 .contact {
   margin: 20px 0;
