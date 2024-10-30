@@ -1,4 +1,5 @@
 import React from "react";
+import Tooltip from "../Tooltip";
 
 function Experience({ experience }) {
   return (
@@ -30,14 +31,27 @@ function Experience({ experience }) {
 export default Experience;
 
 function Job({ job }) {
-  const { company, title, duration } = job;
+  const { company, title, duration, responsibilities } = job;
+
+  const para = (
+    <p>
+      <strong>{company}</strong> | {title} ({duration})
+    </p>
+  );
+
+  const responsible = (
+    <ul>
+      {responsibilities.map((res) => (
+        <li>{res}</li>
+      ))}
+    </ul>
+  );
+
   return (
     <div className="job" id={company.replace(/\s+/g, "")}>
-      {" "}
       {/* Use replace to remove spaces if you need a class name */}
-      <p>
-        <strong>{company}</strong> | {title} ({duration})
-      </p>
+
+      <Tooltip text={responsible}>{para}</Tooltip>
     </div>
   );
 }
