@@ -11,11 +11,29 @@
   position: absolute;
   background-color: black;
   color: #fff;
-  text-align: center;
   border-radius: 5px;
   padding: 5px;
   z-index: 1;
   pointer-events: none;
   opacity: 0.9;
+  text-align: left;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 400px;
   /* Offset to center above the cursor */
+}
+.hover-text ul {
+  list-style-type: disc;
+}
+
+.hover-text.bottom {
+  top: 100%; /* Position below the children */
+  left: 20%;
+  transform: translate(-50%, 5px); /* Offset downwards */
+}
+
+.hover-text.top {
+  bottom: 100%; /* Position above the children */
+  left: 20%;
+  transform: translate(-50%, -5x); /* Offset upwards */
 }/*# sourceMappingURL=tooltip.css.map */

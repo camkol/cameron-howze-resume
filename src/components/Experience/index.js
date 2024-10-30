@@ -1,11 +1,12 @@
 import React from "react";
+import "./Experience.css";
 import Tooltip from "../Tooltip";
 
 function Experience({ experience }) {
   return (
     <div id="experience" className="righties">
       <h3>Work Experience</h3>
-      <h3>Volunteer Experience</h3>
+      {/* <h3>Volunteer Experience</h3> */}
       <p>
         <strong>XyLine | XysTinyFinds LLC</strong> (2023-Present)
       </p>

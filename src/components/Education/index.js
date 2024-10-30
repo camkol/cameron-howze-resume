@@ -32,7 +32,7 @@ function Institute({ name, details }) {
           );
 
           return (
-            <Tooltip key={index} text={lessonsList}>
+            <Tooltip position="top" key={index} text={lessonsList}>
               {cert.link ? (
                 <a href={cert.link} target="_blank" rel="noopener noreferrer">
                   {cert.course}
@@ -55,7 +55,7 @@ function Institute({ name, details }) {
       {/* Render certificates if present */}
       {formattedCertificates && (
         <p>
-          Certificates:
+          Certificates:{" "}
           {formattedCertificates.reduce((prev, curr) => [prev, ", ", curr])}
         </p>
       )}
@@ -66,6 +66,7 @@ function Institute({ name, details }) {
           {degrees.map((degree, index) => (
             <div key={index}>
               <Tooltip
+                position="top"
                 text={
                   <ul>
                     {degree.lessons.map((lesson, lessonIndex) => (

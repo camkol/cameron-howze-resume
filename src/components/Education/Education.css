@@ -5,4 +5,11 @@
 .schools h4,
 .schools p {
   margin: 0;
+}
+
+.hover-container a {
+  color: black;
+}
+.hover-container :hover {
+  color: gray;
 }/*# sourceMappingURL=Education.css.map */

@@ -7,3 +7,11 @@
     margin: 0;
   }
 }
+.hover-container {
+  a {
+    color: black;
+  }
+  :hover {
+    color: gray;
+  }
+}

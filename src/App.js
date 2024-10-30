@@ -24,7 +24,9 @@ function App() {
       <div className="right">
         {" "}
         <Projects />
+        <hr />
         <Experience experience={experience} />
+        <hr />
         <Education education={education} />
       </div>
     </div>
