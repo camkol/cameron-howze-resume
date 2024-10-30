@@ -11,8 +11,16 @@ function Experience({ experience }) {
         <strong>XyLine | XysTinyFinds LLC</strong> (2023-Present)
       </p>
       <ul>
-        <li>Developed and maintained the organization's website.</li>
-        <li>Improved user experience and content updates.</li>
+        <li>
+          Striving for consistency, I emulated the design of their old website,
+          then enhance upon request.
+        </li>{" "}
+        <li>A JavaScript-based slideshow was implemented for visual appeal.</li>{" "}
+        <li>
+          Leveraging my Photoshop skills, I converted images to JPG format to
+          enhance accessibility and reduce file sizes, subsequently improving
+          load times.
+        </li>
       </ul>
       {experience.map((job, index) => (
         <Job job={job} key={index} />
