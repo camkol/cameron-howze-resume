@@ -1,0 +1,9 @@
+#skills {
+  background-color: rgb(183, 183, 183);
+}
+#skills .categories .category {
+  margin-bottom: 0;
+}
+#skills .categories .skill {
+  margin-top: 0;
+}/*# sourceMappingURL=Skills.css.map */

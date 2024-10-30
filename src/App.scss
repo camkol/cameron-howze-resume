@@ -15,28 +15,18 @@ $font-family_1: "Century Gothic";
   display: flex;
   // background-color: gray;
   .left {
-    width: 30%;
-    padding-right: 1rem;
+    width: 35%;
+    .lefties {
+      padding: 0.5rem;
+    }
   }
   .right {
-    width: 70%;
+    width: 65%;
+    padding-left: 0.5rem;
+    background-color: rgb(228, 228, 228);
   }
 }
-.contact {
-  margin: 20px 0;
-}
-.skills {
-  margin: 20px 0;
-}
-.projects {
-  margin: 20px 0;
-}
-.experience {
-  margin: 20px 0;
-}
-.education {
-  margin: 20px 0;
-}
+
 h1 {
   font-size: 2.5rem;
 }

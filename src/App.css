@@ -11,31 +11,15 @@
   display: flex;
 }
 .App .left {
-  width: 30%;
-  padding-right: 1rem;
+  width: 35%;
+}
+.App .left .lefties {
+  padding: 0.5rem;
 }
 .App .right {
-  width: 70%;
-}
-
-.contact {
-  margin: 20px 0;
-}
-
-.skills {
-  margin: 20px 0;
-}
-
-.projects {
-  margin: 20px 0;
-}
-
-.experience {
-  margin: 20px 0;
-}
-
-.education {
-  margin: 20px 0;
+  width: 65%;
+  padding-left: 0.5rem;
+  background-color: rgb(228, 228, 228);
 }
 
 h1 {

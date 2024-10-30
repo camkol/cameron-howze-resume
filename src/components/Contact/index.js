@@ -29,7 +29,7 @@ function Contact() {
   ];
 
   return (
-    <div className="contact">
+    <div id="contact" className="lefties">
       <h1>Cameron Howze</h1>
       <h2>Front-end Web Developer</h2>
       {/* <p>Phone: (757) 447-4873</p>

@@ -1,14 +1,15 @@
 h1 {
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 h2 {
   margin-top: 0.5rem;
 }
-.contact {
-  color: black;
+#contact {
+  background-color: black;
+  color: white;
   p {
     a {
-      color: black;
+      color: white;
     }
     :hover {
       color: grey;
