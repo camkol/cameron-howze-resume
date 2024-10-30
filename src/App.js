@@ -17,10 +17,8 @@ function App() {
     <div className="App">
       <div className="left">
         {" "}
-        <h1>Cameron Howze</h1>
-        <h2>Front-end Web Developer</h2>
-        <Objective />
         <Contact />
+        <Objective />
         <Skills skills={skills} />
       </div>
       <div className="right">

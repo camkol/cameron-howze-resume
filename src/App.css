@@ -4,6 +4,7 @@
 }
 .App {
   font-family: "Century Gothic";
+  font-size: 0.8rem;
   margin: auto;
   width: 8in;
   height: 10.5;
@@ -11,6 +12,7 @@
 }
 .App .left {
   width: 30%;
+  padding-right: 1rem;
 }
 .App .right {
   width: 70%;

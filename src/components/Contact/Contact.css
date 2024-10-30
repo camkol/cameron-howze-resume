@@ -1,0 +1,17 @@
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 0.5rem;
+}
+
+.contact {
+  color: black;
+}
+.contact p a {
+  color: black;
+}
+.contact p :hover {
+  color: grey;
+}/*# sourceMappingURL=Contact.css.map */

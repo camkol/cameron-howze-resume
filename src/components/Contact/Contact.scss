@@ -1,0 +1,17 @@
+h1 {
+  margin-bottom: 0.5rem;
+}
+h2 {
+  margin-top: 0.5rem;
+}
+.contact {
+  color: black;
+  p {
+    a {
+      color: black;
+    }
+    :hover {
+      color: grey;
+    }
+  }
+}

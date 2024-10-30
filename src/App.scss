@@ -8,6 +8,7 @@ $font-family_1: "Century Gothic";
 
 .App {
   font-family: $font-family_1;
+  font-size: 0.8rem;
   margin: auto;
   width: 8in;
   height: 10.5;
@@ -15,6 +16,7 @@ $font-family_1: "Century Gothic";
   // background-color: gray;
   .left {
     width: 30%;
+    padding-right: 1rem;
   }
   .right {
     width: 70%;
