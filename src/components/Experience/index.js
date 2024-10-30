@@ -3,7 +3,7 @@ import Tooltip from "../Tooltip";
 
 function Experience({ experience }) {
   return (
-    <div className="experience">
+    <div id="experience" className="righties">
       <h3>Work Experience</h3>
       <h3>Volunteer Experience</h3>
       <p>

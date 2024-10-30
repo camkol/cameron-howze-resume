@@ -1,9 +1,10 @@
 import React from "react";
+import "./Education.css";
 import Tooltip from "../Tooltip";
 
 function Education({ education }) {
   return (
-    <div className="education">
+    <div id="education" className="righties">
       <h3>Education</h3>
 
       {Object.entries(education).map(([institute, details]) => (
@@ -47,14 +48,14 @@ function Institute({ name, details }) {
 
   return (
     <div className="institute" id={name.replace(/\s+/g, "")}>
-      <div>
+      <div className="schools">
         <h4>{name}</h4>
         <p>{year}</p>
       </div>
       {/* Render certificates if present */}
       {formattedCertificates && (
         <p>
-          <strong>Certificates:</strong>{" "}
+          Certificates:
           {formattedCertificates.reduce((prev, curr) => [prev, ", ", curr])}
         </p>
       )}

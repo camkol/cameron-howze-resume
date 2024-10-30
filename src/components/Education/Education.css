@@ -1,0 +1,8 @@
+.schools {
+  display: flex;
+  justify-content: space-between;
+}
+.schools h4,
+.schools p {
+  margin: 0;
+}/*# sourceMappingURL=Education.css.map */

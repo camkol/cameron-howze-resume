@@ -11,18 +11,21 @@ $font-family_1: "Century Gothic";
   font-size: 0.8rem;
   margin: auto;
   width: 8in;
-  height: 10.5;
+  height: 10.5in;
   display: flex;
   // background-color: gray;
   .left {
     width: 35%;
+    height: 100%;
+    background-color: rgb(183, 183, 183);
+
     .lefties {
       padding: 0.5rem;
     }
   }
   .right {
     width: 65%;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
     background-color: rgb(228, 228, 228);
   }
 }
