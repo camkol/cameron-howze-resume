@@ -54,10 +54,10 @@ function Institute({ name, details }) {
       </div>
       {/* Render certificates if present */}
       {formattedCertificates && (
-        <p>
+        <div>
           Certificates:{" "}
           {formattedCertificates.reduce((prev, curr) => [prev, ", ", curr])}
-        </p>
+        </div>
       )}
 
       {/* Render degrees if present */}

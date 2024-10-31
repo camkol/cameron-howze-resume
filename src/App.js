@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -12,22 +13,30 @@ function App() {
   const skills = resumeData.skills;
   const experience = resumeData.experience;
   const education = resumeData.education;
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   return (
-    <div className="App">
-      <div className="left">
+    <div>
+      <button onClick={handlePrint}>Print Resume</button> {/* Print button */}
+      <div className="App" ref={componentRef}>
         {" "}
-        <Contact />
-        <Objective />
-        <Skills skills={skills} />
-      </div>
-      <div className="right">
-        {" "}
-        <Projects />
-        <hr />
-        <Experience experience={experience} />
-        <hr />
-        <Education education={education} />
+        {/* Ref for printing */}
+        <div className="left">
+          <Contact />
+          <Objective />
+          <Skills skills={skills} />
+        </div>
+        <div className="right">
+          <Projects />
+          <hr />
+          <Experience experience={experience} />
+          <hr />
+          <Education education={education} />
+        </div>
       </div>
     </div>
   );

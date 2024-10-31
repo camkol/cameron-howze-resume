@@ -50,8 +50,8 @@ function Job({ job }) {
 
   const responsible = (
     <ul>
-      {responsibilities.map((res) => (
-        <li>{res}</li>
+      {responsibilities.map((res, index) => (
+        <li key={index}>{res}</li>
       ))}
     </ul>
   );
