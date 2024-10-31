@@ -355,6 +355,8 @@ Yes, you can absolutely add active hyperlinks to a PDF generated with **pdf-lib*
 
 This will create clickable links directly in your PDF, accessible in most PDF readers. Let me know if you want to integrate this into your current resume project, and I can walk you through it!
 
+---
+
 You can adapt your React resume app to export as a PDF while maintaining its existing structure and styles. Here’s a guide on how to approach it using the `react-to-print` library for an on-page print and `html2canvas` with `jspdf` for exporting it as a PDF:
 
 ### Step 1: Install Necessary Libraries
