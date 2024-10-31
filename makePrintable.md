@@ -354,3 +354,109 @@ Yes, you can absolutely add active hyperlinks to a PDF generated with **pdf-lib*
    Once generated, you can serve the PDF as a downloadable link or view it in a PDF viewer in the browser.
 
 This will create clickable links directly in your PDF, accessible in most PDF readers. Let me know if you want to integrate this into your current resume project, and I can walk you through it!
+
+You can adapt your React resume app to export as a PDF while maintaining its existing structure and styles. Here’s a guide on how to approach it using the `react-to-print` library for an on-page print and `html2canvas` with `jspdf` for exporting it as a PDF:
+
+### Step 1: Install Necessary Libraries
+
+To handle the PDF generation, you’ll need `react-to-print` for printing directly and `html2canvas` and `jspdf` for custom PDF creation:
+
+```bash
+npm install react-to-print html2canvas jspdf
+```
+
+### Step 2: Set Up `react-to-print` for Printing
+
+The `react-to-print` library will let you add a print button that, when clicked, opens a print dialog (which users can save as a PDF on most systems).
+
+1. **Wrap your `App` component** in a `div` that `react-to-print` can reference.
+2. **Add the print button and functionality.**
+
+Here’s an example setup:
+
+#### Updated `App.js` Component
+
+```javascript
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+import Contact from "./components/Contact";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Objective from "./components/Objective";
+import { resumeData } from "./resumeData";
+import "./App.css";
+
+function App() {
+  const skills = resumeData.skills;
+  const experience = resumeData.experience;
+  const education = resumeData.education;
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
+  return (
+    <div>
+      <button onClick={handlePrint}>Print Resume</button> {/* Print button */}
+      <div className="App" ref={componentRef}>
+        {" "}
+        {/* Ref for printing */}
+        <div className="left">
+          <Contact />
+          <Objective />
+          <Skills skills={skills} />
+        </div>
+        <div className="right">
+          <Projects />
+          <hr />
+          <Experience experience={experience} />
+          <hr />
+          <Education education={education} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Step 3: Export as a Custom PDF with `html2canvas` and `jspdf`
+
+If you want to generate a PDF directly without using the print dialog, `html2canvas` and `jspdf` will let you do that.
+
+1. **Capture the entire `App` component** as an image with `html2canvas`.
+2. **Convert it into a PDF** using `jspdf`.
+
+Add this to `App.js`:
+
+```javascript
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+
+function handleDownloadPDF() {
+  const input = componentRef.current;
+  html2canvas(input).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "pt", "a4");
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("Cameron_Howze_Resume.pdf");
+  });
+}
+```
+
+Then add another button to trigger the PDF download:
+
+```javascript
+<button onClick={handleDownloadPDF}>Download PDF</button>
+```
+
+### Final Thoughts on PDF Interactivity
+
+- **Tooltips and Links**: Your tooltip effects won’t translate directly into the static PDF image, but **links** will still work if you’re generating with `react-to-print` and saving it as a PDF through the print dialog.
