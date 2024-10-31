@@ -39,7 +39,12 @@ function Contact() {
       {/* <p>Phone: (757) 447-4873</p>
       <p>WhatsApp: +49 157 53026132</p> */}
       <p>
-        <FontAwesomeIcon icon={faLocationDot} />
+        <FontAwesomeIcon
+          icon={faLocationDot}
+          style={{ marginRight: "0.7rem" }}
+        />
+        <span className="US">Norfolk, VA</span>
+        <span className="EU">Berlin, Germany</span>
       </p>
       {contactInfo.map((item, index) => (
         <ContactItem
