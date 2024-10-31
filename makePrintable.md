@@ -305,3 +305,52 @@ async function createInteractivePDF() {
 ```
 
 For a fully interactive PDF with tooltips, you may need a paid solution or a desktop PDF editor like Adobe Acrobat to add custom JavaScript or complex behaviors after the PDF is generated. Let me know if you’re interested in one of these options or need help setting up **pdf-lib**!
+
+hey how about active links from the <a>?
+
+Yes, you can absolutely add active hyperlinks to a PDF generated with **pdf-lib**! With **pdf-lib**, you can create clickable links that will open in a browser when clicked in the PDF. Here’s an example of how to add a URL link to text in your PDF:
+
+1. **Install pdf-lib** if you haven’t already:
+
+   ```bash
+   npm install pdf-lib
+   ```
+
+2. **Generate PDF with Active Links**:
+   In your PDF generation function, use `pdfDoc.addPage()` to create a new page, and `page.drawText()` to place the text. Then, use `page.addLinkAnnotation()` to add the hyperlink.
+
+   Here’s how it could look in code:
+
+   ```javascript
+   import { PDFDocument, rgb } from "pdf-lib";
+
+   async function createPDFWithLinks() {
+     const pdfDoc = await PDFDocument.create();
+     const page = pdfDoc.addPage([600, 750]);
+
+     // Add text with a hyperlink
+     page.drawText("Visit OpenAI!", {
+       x: 100,
+       y: 600,
+       size: 12,
+       color: rgb(0, 0, 1),
+     });
+
+     // Create an active link
+     page.addLinkAnnotation({
+       rect: [100, 585, 170, 600], // Coordinates of the link
+       url: "https://www.openai.com", // Destination URL
+     });
+
+     const pdfBytes = await pdfDoc.save();
+     return pdfBytes;
+   }
+   ```
+
+   - **`rect`**: Defines the clickable area as `[x, y, width, height]` in PDF coordinates.
+   - **`url`**: Sets the destination for the link.
+
+3. **Integrate in React**:
+   Once generated, you can serve the PDF as a downloadable link or view it in a PDF viewer in the browser.
+
+This will create clickable links directly in your PDF, accessible in most PDF readers. Let me know if you want to integrate this into your current resume project, and I can walk you through it!
