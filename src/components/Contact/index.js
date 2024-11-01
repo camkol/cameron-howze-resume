@@ -43,7 +43,7 @@ function Contact() {
           icon={faLocationDot}
           style={{ marginRight: "0.7rem" }}
         />
-        <span className="US">Norfolk, VA</span>
+        {/* <span className="US">Norfolk, VA</span> */}
         <span className="EU">Berlin, Germany</span>
       </p>
       {contactInfo.map((item, index) => (
