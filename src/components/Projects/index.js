@@ -17,7 +17,15 @@ function Projects() {
       </div> */}
       <div id="shoppingList">
         <p>
-          <strong>Shopping List App with Local Storage Persistence</strong>
+          <strong>
+            <a
+              href="https://shoppinglist25.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Shopping List App with Local Storage Persistence
+            </a>
+          </strong>
         </p>
         <ul>
           <li>
@@ -32,6 +40,30 @@ function Projects() {
             Used a custom useLocalStorageState hook to persist the list across
             sessions, ensuring data retention even after refreshing or closing
             the browser.
+          </li>
+        </ul>
+      </div>
+      <div id="codecademy-store-redux">
+        <p>
+          <a
+            href="https://codecademystoreredux.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Codecademy Store with Redux</strong>
+          </a>
+        </p>
+        <ul>
+          <li>
+            Built a Redux-based store application, managing complex state across
+            multiple slices (inventory, cart, currency) and resolving challenges
+            in combining reducers and creating a responsive store structure.
+          </li>
+          <li>
+            Integrated state and dispatch methods to ensure real-time updates,
+            and implemented actions to modify item quantities, improving the
+            user experience through optimized state immutability and search
+            filter functionality.
           </li>
         </ul>
       </div>

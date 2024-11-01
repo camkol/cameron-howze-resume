@@ -1,1 +1,10 @@
-/*# sourceMappingURL=Projects.css.map */
+
+#projects a {
+  color: black;
+}
+#projects a:hover {
+  color: gray;
+}
+#projects p {
+  margin-bottom: 0.3rem;
+}/*# sourceMappingURL=Projects.css.map */

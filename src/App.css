@@ -6,8 +6,8 @@
   font-family: "Century Gothic";
   font-size: 0.8rem;
   margin: auto;
-  width: 8in;
-  height: 10.5in;
+  width: 8.5in;
+  height: 11in;
   display: flex;
 }
 .App .left {
@@ -41,4 +41,5 @@ h3 {
 
 ul {
   list-style-type: none;
+  margin-top: 0;
 }/*# sourceMappingURL=App.css.map */

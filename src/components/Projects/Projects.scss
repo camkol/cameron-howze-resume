@@ -1,0 +1,15 @@
+$color_1: black;
+$color_2: gray;
+
+/*# sourceMappingURL=Projects.css.map */
+#projects {
+  a {
+    color: $color_1;
+    &:hover {
+      color: $color_2;
+    }
+  }
+  p {
+    margin-bottom: 0.3rem;
+  }
+}

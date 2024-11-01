@@ -7,32 +7,29 @@ function Experience({ experience }) {
     <div id="experience" className="righties">
       <h3>Work Experience</h3>
       {/* <h3>Volunteer Experience</h3> */}
-      <p>
-        <strong>XyLine | XysTinyFinds LLC</strong> (2023-Present)
-      </p>
-      <ul>
-        <li>
-          Striving for consistency, I emulated the design of their old website,
-          then enhance upon request.
-        </li>{" "}
-        <li>A JavaScript-based slideshow was implemented for visual appeal.</li>{" "}
-        <li>
-          Leveraging my Photoshop skills, I converted images to JPG format to
-          enhance accessibility and reduce file sizes, subsequently improving
-          load times.
-        </li>
-      </ul>
+
+      <div class="job" id="xysTinyFindsLLC">
+        <p>
+          <strong>XysTinyFinds LLC |</strong> Freelancer (2023-Present)
+        </p>{" "}
+        <ul>
+          <li>
+            Striving for consistency, I emulated the design of their old
+            website, then enhance upon request.
+          </li>{" "}
+          <li>
+            A JavaScript-based slideshow was implemented for visual appeal.
+          </li>{" "}
+          <li>
+            Leveraging my Photoshop skills, I converted images to JPG format to
+            enhance accessibility and reduce file sizes, subsequently improving
+            load times.
+          </li>
+        </ul>
+      </div>
       {experience.map((job, index) => (
         <Job job={job} key={index} />
       ))}
-
-      {/* <p>
-        <strong>US Army</strong> | Petroleum Supply Specialist (2009-2016)
-      </p>
-      <ul>
-        <li>Managed the distribution of 80K gallons of diesel fuel.</li>
-        <li>Trained and mentored Afghan military personnel.</li>
-      </ul> */}
     </div>
   );
 }
