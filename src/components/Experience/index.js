@@ -10,7 +10,18 @@ function Experience({ experience }) {
 
       <div class="job" id="xysTinyFindsLLC">
         <p>
-          <strong>XysTinyFinds LLC |</strong> Freelancer (2023-Present)
+          <strong>
+            XysTinyFinds LLC |{" "}
+            <a
+              href="https://camkol.github.io/xystinyfind/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xyline
+            </a>{" "}
+            |
+          </strong>{" "}
+          Freelancer (2023-Present)
         </p>{" "}
         <ul>
           <li>
