@@ -10,7 +10,7 @@
 .hover-container a {
   color: black;
 }
-.hover-container:hover {
+.hover-container a:hover {
   color: gray;
 }
 
