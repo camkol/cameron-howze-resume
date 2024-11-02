@@ -1,3 +1,9 @@
 #experience p {
   margin-bottom: 0.3rem;
+}
+#experience a {
+  color: black;
+}
+#experience:hover {
+  color: gray;
 }/*# sourceMappingURL=Experience.css.map */
