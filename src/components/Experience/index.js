@@ -8,7 +8,7 @@ function Experience({ experience }) {
       <h3>Work Experience</h3>
       {/* <h3>Volunteer Experience</h3> */}
 
-      <div class="job" id="xysTinyFindsLLC">
+      <div className="job" id="xysTinyFindsLLC">
         <p>
           <strong>
             XysTinyFinds LLC |{" "}

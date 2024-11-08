@@ -1,6 +1,8 @@
 import React from "react";
 import "./Education.css";
 import Tooltip from "../Tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 function Education({ education }) {
   return (
@@ -36,6 +38,7 @@ function Institute({ name, details }) {
               {cert.link ? (
                 <a href={cert.link} target="_blank" rel="noopener noreferrer">
                   {cert.course}
+                  {/* <FontAwesomeIcon icon={faLink} /> */}
                 </a>
               ) : (
                 <span>{cert.course}</span>
