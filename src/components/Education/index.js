@@ -1,7 +1,7 @@
 import React from "react";
 import "./Education.css";
 import Tooltip from "../Tooltip";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 function Education({ education }) {
