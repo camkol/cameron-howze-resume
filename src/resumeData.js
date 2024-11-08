@@ -165,7 +165,7 @@ export const resumeData = {
       ],
     },
     Udemy: {
-      year: "2023-Present",
+      year: "2021-Present",
       image: "images/education/Udemy_logo.svg.png",
       certificate: [
         {
