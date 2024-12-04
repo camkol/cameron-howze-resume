@@ -32,7 +32,10 @@ function Contact() {
   ];
 
   return (
-    <div id="contact" className="bg-black text-white py-4 px-2 space-y-2">
+    <div
+      id="contact"
+      className="bg-gradient-to-br from-gray-700 to-black text-white py-4 px-2 space-y-2"
+    >
       <h1 className="text-4xl">Cameron Howze</h1>
       <h2 className="text-lg">Front-end Web Developer</h2>
       {/* <p>Phone: (757) 447-4873</p>

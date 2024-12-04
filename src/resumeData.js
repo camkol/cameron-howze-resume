@@ -4,7 +4,9 @@ export const resumeData = {
     Frontend: [
       "Redux",
       "ReactJS",
+      "MUI",
       "jQuery",
+      "Tailwind",
       "Bootstrap",
       "SASS",
       "CSS",

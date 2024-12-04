@@ -51,7 +51,7 @@ function Job({ job }) {
   const { company, title, duration, responsibilities } = job;
 
   const para = (
-    <p>
+    <p className="tracking-tight">
       <strong className="font-bold">{company}</strong> | {title} ({duration})
     </p>
   );

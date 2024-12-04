@@ -14,12 +14,12 @@ function App() {
   return (
     <div id="App" className="flex m-auto text-sm">
       {/* Ref for printing */}
-      <div className="bg-gray-400 w-4/12">
+      <div className="bg-gradient-to-br from-gray-200 to-gray-500 w-4/12">
         <Contact />
         <Objective />
         <Skills skills={skills} />
       </div>
-      <div className="w-8/12 bg-gray-300 p-2">
+      <div className="w-8/12 bg-gradient-to-br from-gray-50 to-gray-300 p-2">
         <Projects />
         <hr className="border-gray-400 border-t-1 mb-4" />
         <Experience experience={experience} />

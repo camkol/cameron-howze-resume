@@ -2,7 +2,10 @@ import React from "react";
 
 function Objective() {
   return (
-    <div className="bg-gray-500 text-gray-100 py-4 px-2" id="objective">
+    <div
+      className="bg-gradient-to-br from-gray-300 to-gray-500 text-gray-200 py-4 px-2"
+      id="objective"
+    >
       <h3 className="my-2 text-2xl">Objective</h3>
       <p className="leading-4">
         Eager entry-level web developer with a strong interest in creating
