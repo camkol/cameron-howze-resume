@@ -1,13 +1,12 @@
 import React from "react";
-import "./Education.css";
 import Tooltip from "../Tooltip";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 function Education({ education }) {
   return (
-    <div id="education" className="righties">
-      <h3>Education</h3>
+    <div id="education">
+      <h3 className="my-2 text-2xl">Education</h3>
 
       {Object.entries(education).map(([institute, details]) => (
         <Institute key={institute} name={institute} details={details} />
@@ -36,7 +35,12 @@ function Institute({ name, details }) {
           return (
             <Tooltip position="top" key={index} text={lessonsList}>
               {cert.link ? (
-                <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="underline hover:text-gray-500"
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {cert.course}
                   {/* <FontAwesomeIcon icon={faLink} /> */}
                 </a>
@@ -50,9 +54,9 @@ function Institute({ name, details }) {
     : null;
 
   return (
-    <div className="institute" id={name.replace(/\s+/g, "")}>
-      <div className="schools">
-        <h4>{name}</h4>
+    <div className="mb-2" id={name.replace(/\s+/g, "")}>
+      <div className="flex justify-between">
+        <h4 className="font-bold">{name}</h4>
         <p>{year}</p>
       </div>
       {/* Render certificates if present */}
@@ -67,7 +71,7 @@ function Institute({ name, details }) {
       {degrees && (
         <div>
           {degrees.map((degree, index) => (
-            <div key={index}>
+            <div className="my-2" key={index}>
               <Tooltip
                 position="top"
                 text={

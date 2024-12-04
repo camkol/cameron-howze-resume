@@ -1,11 +1,10 @@
 import React from "react";
-import "./Objective.css";
 
 function Objective() {
   return (
-    <div className="lefties" id="objective">
-      <h3>Objective</h3>
-      <p>
+    <div className="bg-gray-500 text-gray-100 py-4 px-2" id="objective">
+      <h3 className="my-2 text-2xl">Objective</h3>
+      <p className="leading-4">
         Eager entry-level web developer with a strong interest in creating
         intuitive, user-friendly applications and enhancing front-end
         experiences. Enthusiastic about learning new technologies, collaborating

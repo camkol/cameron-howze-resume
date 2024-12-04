@@ -1,5 +1,4 @@
 import React from "react";
-import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGlobe,
@@ -33,24 +32,18 @@ function Contact() {
   ];
 
   return (
-    <div id="contact" className="lefties">
-      <h1>Cameron Howze</h1>
-      <h2>Front-end Web Developer</h2>
+    <div id="contact" className="bg-black text-white py-4 px-2 space-y-2">
+      <h1 className="text-4xl">Cameron Howze</h1>
+      <h2 className="text-lg">Front-end Web Developer</h2>
       {/* <p>Phone: (757) 447-4873</p>
       <p>WhatsApp: +49 157 53026132</p> */}
       <p>
-        <FontAwesomeIcon
-          icon={faLocationDot}
-          style={{ marginRight: "0.7rem" }}
-        />
-        <span className="EU">Berlin, Germany</span>
+        <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
+        <span>Berlin, Germany</span>
       </p>
       <p>
-        <FontAwesomeIcon
-          icon={faLocationDot}
-          style={{ marginRight: "0.7rem" }}
-        />
-        <span className="US">Norfolk, VA</span>
+        <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
+        <span>Norfolk, VA</span>
       </p>
       {contactInfo.map((item, index) => (
         <ContactItem
@@ -69,12 +62,12 @@ export default Contact;
 function ContactItem({ icon, label, link }) {
   return (
     <p>
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} className="mr-2" />
       <a
         target="_blank"
         rel="noopener noreferrer"
         href={link}
-        style={{ marginLeft: "0.5rem" }}
+        className="hover:text-gray-500 mr-3"
       >
         {label}
       </a>

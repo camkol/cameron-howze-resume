@@ -1,10 +1,9 @@
 import React from "react";
-import "./Projects.css";
 
 function Projects() {
   return (
-    <div id="projects" className="righties">
-      <h3>Projects</h3>
+    <div id="projects" className="">
+      <h3 className="my-2 text-2xl">Projects</h3>
       {/* <div id="rock-paprer-scissor">
         <p>
           <strong>Rock-Paper-Scissors Game with Server Integration</strong>
@@ -15,19 +14,20 @@ function Projects() {
           store results.
         </p>
       </div> */}
-      <div id="shoppingList">
-        <p>
+      <div className="mb-2" id="shoppingList">
+        <p className="underline">
           <strong>
             <a
               href="https://shoppinglist25.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-gray-500"
             >
               Shopping List App with Local Storage Persistence
             </a>
           </strong>
         </p>
-        <ul>
+        <ul className="list-disc ml-5">
           <li>
             Developed a React-based shopping list application with components
             for adding, displaying, and managing items.
@@ -43,17 +43,18 @@ function Projects() {
           </li>
         </ul>
       </div>
-      <div id="codecademy-store-redux">
-        <p>
+      <div className="mb-2" id="codecademy-store-redux">
+        <p className="underline">
           <a
             href="https://codecademystoreredux.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:text-gray-500"
           >
             <strong>Codecademy Store with Redux</strong>
           </a>
         </p>
-        <ul>
+        <ul className="list-disc ml-5">
           <li>
             Built a Redux-based store application, managing complex state across
             multiple slices (inventory, cart, currency) and resolving challenges
