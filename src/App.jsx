@@ -1,5 +1,3 @@
-import React from "react";
-
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
