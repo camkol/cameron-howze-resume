@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Objective from "./components/Objective";
-import { resumeData } from "./resumeData";
+import resumeData from "./resumeData.json";
 
 function App() {
   const { skills, experience, education } = resumeData;
